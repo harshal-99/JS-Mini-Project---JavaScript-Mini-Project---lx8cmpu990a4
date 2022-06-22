@@ -1,0 +1,13 @@
+main {
+	padding: 3rem;
+	background-color: white;
+}
+
+.container {
+	display: flex;
+	justify-content: space-between;
+}
+
+.grid-container {
+	padding: 1rem;
+}

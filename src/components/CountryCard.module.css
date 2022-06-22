@@ -1,0 +1,14 @@
+img {
+	height: 7rem;
+	width: 15rem;
+}
+
+.data {
+	padding: .5rem;
+}
+
+.container {
+	border: 1px solid black;
+	width: 15rem;
+	margin: 2rem;
+}

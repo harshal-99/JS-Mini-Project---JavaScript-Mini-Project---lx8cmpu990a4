@@ -1,0 +1,18 @@
+.container {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+}
+
+.more-info {
+	display: flex;
+	justify-content: space-between;
+}
+
+.info-detail {
+	padding: 0.5rem;
+}
+
+.bolder {
+	font-weight: bolder;
+}

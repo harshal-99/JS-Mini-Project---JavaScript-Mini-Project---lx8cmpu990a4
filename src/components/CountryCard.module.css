@@ -8,7 +8,15 @@ img {
 }
 
 .container {
-	border: 1px solid black;
 	width: 15rem;
 	margin: 2rem;
+	color: black;
+}
+
+a {
+	text-decoration: none;
+}
+
+.bold {
+	font-weight: bold;
 }

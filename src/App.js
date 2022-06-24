@@ -5,6 +5,8 @@ import Filter from "./components/Filter";
 import {useEffect, useState} from "react";
 import axios from "axios";
 import Grid from "./components/Grid";
+import {BrowserRouter, Route, Switch} from "react-router-dom";
+import Country from "./routes/Country";
 
 function App() {
 	const url = 'https://restcountries.com/v3.1/all'
@@ -46,25 +48,33 @@ function App() {
 				countriesToRender = countries.filter(country => country.region === region)
 			}
 		}
-
 	}
-
 
 	return (
 		<div className={styles.app}>
 			<NavBar/>
-			<main>
-				<div className={styles.container}>
-					<SearchBar searchText={searchInput}
-					           updateSearchText={setSearchInput}/>
-					<Filter setRegion={setRegion}/>
-				</div>
-				<div className={styles.gridContainer}>
-					{countriesToRender.length > 0 &&
-						<Grid countries={countriesToRender}/>
-					}
-				</div>
-			</main>
+			<BrowserRouter>
+				<Switch>
+					<Route exact path='/'>
+						<main>
+							<div className={styles.container}>
+								<SearchBar searchText={searchInput}
+								           updateSearchText={setSearchInput}/>
+								<Filter setRegion={setRegion}/>
+							</div>
+							<div className={styles.gridContainer}>
+								{(countriesToRender.length > 0)
+									? <Grid countries={countriesToRender}/>
+									: <div>Loading...</div>}
+							</div>
+						</main>
+					</Route>
+					<Route path="/:name"
+					       children={(countries.length > 0)
+						       ? <Country countries={countries}/>
+						       : <div>Loading...</div>}/>
+				</Switch>
+			</BrowserRouter>
 		</div>
 	);
 }

@@ -2,6 +2,8 @@
 	display: flex;
 	justify-content: space-evenly;
 	align-items: center;
+	width: inherit;
+	height: inherit;
 }
 
 .more-info {
@@ -15,4 +17,25 @@
 
 .bolder {
 	font-weight: bolder;
+}
+
+a {
+	color: black;
+}
+
+.transparent {
+	background-color: transparent;
+	border: 1px solid gray;
+}
+
+@media screen and (max-width: 800px){
+	.container {
+		flex-direction: column;
+	}
+}
+
+@media screen and (max-width: 550px){
+	.more-info {
+		flex-direction: column;
+	}
 }

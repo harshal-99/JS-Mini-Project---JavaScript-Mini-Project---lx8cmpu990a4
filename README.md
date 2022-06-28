@@ -37,8 +37,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [solution URL](https://your-solution-url.com)
-- Live Site URL: [live site URL](https://your-live-site-url.com)
+- Solution URL: [live site URL](https://js-mini-project-java-script-mini-project-lx8cmpu990a4.vercel.app/)
+- Live Site URL: [solution URL](https://github.com/gajus/react-css-modules#)
 
 ### Built with
 

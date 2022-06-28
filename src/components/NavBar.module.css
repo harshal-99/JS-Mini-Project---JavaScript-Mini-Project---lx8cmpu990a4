@@ -9,3 +9,13 @@ nav {
 .padding {
 	padding: 0.5rem;
 }
+
+button, button:focus {
+	outline: none;
+	background: transparent;
+	border: 1px solid transparent;
+}
+
+.font-weight-600 {
+	font-weight: 600;
+}
